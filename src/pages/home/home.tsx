@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import HeaderMobile from "../../components/header-mobile";
 import Skill from "../../components/skill";
 import Header from "../../components/header";
+import uz from "../../assets/uzb.png"
+import us from "../../assets/united-states.png"
 
 export interface Skill {
   svg: string;
@@ -131,9 +133,9 @@ export default function Home() {
   return (
     <div className="mt-[57px]">
       <HeaderMobile />
-      <Header/>
+      <Header />
       <div className="bg-gray-300 pt-[74px] pb-[90px]">
-        <div className="flex flex-col items-center px-[40px] lg:w-[700px] lg:mx-auto">
+        <div className="flex flex-col items-center px-[40px] lg:mx-auto lg:w-[700px]">
           <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
             <h1 className="font-montserrat text-[18px] font-bold">About me</h1>
           </div>
@@ -162,18 +164,35 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="flex flex-col items-center justify-center bg-gray-300 pt-[40px] pb-[80px]">
+        <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
+          <h1 className="font-montserrat text-[18px] font-bold">Languages</h1>
+        </div>
+        <div className="flex flex-col items-center justify-center md:flex-row mt-5 gap-7">
+          <div className="flex items-center gap-2">
+            <img src={uz} alt="" className="w-[40px]" />
+            <p className="text-[20px] font-montserrat font-[600]">Uzbek</p>
+          </div>
+           <div className="flex items-center gap-2">
+            <img src={us} alt="" className="w-[40px]" />
+            <p className="text-[20px] font-montserrat font-[600]">English</p>
+          </div>
+        </div>
+      </div>
       <div className="portfolio-bg flex h-[200px] items-center justify-center">
         <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
           <h1 className="font-montserrat text-[18px] font-bold">Portfolio</h1>
         </div>
+
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 bg-black py-10">
+
+      <div className="grid grid-cols-1 gap-7 bg-black py-10 md:grid-cols-2 lg:grid-cols-3">
         {myProjects.map((project) => (
           <Link
             key={project.name}
             to={`/project/${encodeURIComponent(project.name)}`}
             state={{ project }}
-            className="w-full cursor-pointer overflow-hidden  shadow-lg hover:scale-95 transition-all duration-300"
+            className="w-full cursor-pointer overflow-hidden shadow-lg transition-all duration-300 hover:scale-95"
           >
             <img src={project.img} className="h-[200px] w-full object-cover" />
             <div className="bg-gray-300 px-4 py-2">
@@ -182,7 +201,7 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      <div className="bg-gray-300 w-full h-[80px]"></div>
+      <div className="h-[80px] w-full bg-gray-300"></div>
     </div>
   );
 }
