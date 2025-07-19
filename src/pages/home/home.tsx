@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import HeaderMobile from "../../components/header-mobile";
 import Skill from "../../components/skill";
 import Header from "../../components/header";
-import uz from "../../assets/uzb.png"
-import us from "../../assets/united-states.png"
+import uz from "../../assets/uzb.png";
+import us from "../../assets/united-states.png";
 
 export interface Skill {
   svg: string;
@@ -146,14 +146,41 @@ export default function Home() {
             projects. Seeking an opportunity to gain real-world experience and
             contribute to a dynamic development team
           </p>
+        </div>
+        <div className="mt-20 flex flex-col items-center px-[40px] lg:mx-auto lg:w-[700px]">
+          <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
+            <h1 className="font-montserrat text-[18px] font-bold">Education</h1>
+          </div>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
+            PDP Academy:{" "}
+            <span className="font-[600]">June 2024 - June 2025</span>
+          </p>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
-            I have been learing at PDP Academy for a couple of months. I have
-            been taught by experienced programmers at PDP academy for couple of
-            months. Therefore, I learned not only how to program, but also how
-            to behave in a team and on real projects.
+            Studied under experienced engineers, gaining technical skills as
+            well as teamwork and problem-solving abilities through projects.
+            Learned to apply best practices in writing clean, maintainable code
+            and using version control tools like Git.
           </p>
         </div>
-        <div className="mt-[50px] flex flex-col items-center px-[20px]">
+        <div className="mt-20 flex flex-col items-center px-[40px] lg:mx-auto lg:w-[700px]">
+          <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
+            <h1 className="font-montserrat text-[18px] font-bold">
+              Experience
+            </h1>
+
+          </div>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
+            Tenchnocorp:{" "}
+            <span className="font-[600]">July 2025 - Present</span>
+          </p>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
+            Developing responsive web pages with React and Tailwind CSS.
+            Implementing reusable components and ensuring cross-browser
+            compatibility.Using Git for version control and participating in
+            code reviews.
+          </p>
+        </div>
+        <div className="mt-[100px] flex flex-col items-center px-[20px]">
           <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
             <h1 className="font-montserrat text-[18px] font-bold">Skills</h1>
           </div>
@@ -168,14 +195,14 @@ export default function Home() {
         <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
           <h1 className="font-montserrat text-[18px] font-bold">Languages</h1>
         </div>
-        <div className="flex flex-col items-center justify-center md:flex-row mt-5 gap-7">
+        <div className="mt-5 flex flex-col items-center justify-center gap-7 md:flex-row">
           <div className="flex items-center gap-2">
             <img src={uz} alt="" className="w-[40px]" />
-            <p className="text-[20px] font-montserrat font-[600]">Uzbek</p>
+            <p className="font-montserrat text-[20px] font-[600]">Uzbek</p>
           </div>
-           <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <img src={us} alt="" className="w-[40px]" />
-            <p className="text-[20px] font-montserrat font-[600]">English</p>
+            <p className="font-montserrat text-[20px] font-[600]">English</p>
           </div>
         </div>
       </div>
@@ -183,7 +210,6 @@ export default function Home() {
         <div className="flex h-[67px] w-[240px] items-center justify-center border-6">
           <h1 className="font-montserrat text-[18px] font-bold">Portfolio</h1>
         </div>
-
       </div>
 
       <div className="grid grid-cols-1 gap-7 bg-black py-10 md:grid-cols-2 lg:grid-cols-3">
