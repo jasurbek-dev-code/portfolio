@@ -167,17 +167,23 @@ export default function Home() {
             <h1 className="font-montserrat text-[18px] font-bold">
               Experience
             </h1>
-
           </div>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
-            Tenchnocorp:{" "}
-            <span className="font-[600]">July 2025 - Present</span>
+            Tenchnocorp: <span className="font-[600]">July 2025 - Present</span>
           </p>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
             Developing responsive web pages with React and Tailwind CSS.
             Implementing reusable components and ensuring cross-browser
             compatibility.Using Git for version control and participating in
             code reviews.
+          </p>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
+            Pdp Junior: <span className="font-[600]">August 2025 - Present</span>
+          </p>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
+            Guiding junior students in their Frontend Development journey at PDP
+            Junior by providing mentorship, explaining core concepts, and
+            sharing practical project experience.
           </p>
         </div>
         <div className="mt-[100px] flex flex-col items-center px-[20px]">
