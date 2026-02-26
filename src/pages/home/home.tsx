@@ -169,7 +169,8 @@ export default function Home() {
             </h1>
           </div>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
-            Tenchnocorp: <span className="font-[600]">July 2025 - Present</span>
+            Technocorp - <span className="font-medium">Frontend developer</span>
+            : <span className="font-[600]">July 2025 - Present</span>
           </p>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
             Developing responsive web pages with React and Tailwind CSS.
@@ -178,12 +179,21 @@ export default function Home() {
             code reviews.
           </p>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
-            Pdp Junior: <span className="font-[600]">August 2025 - Present</span>
+            Pdp Junior - <span className="font-medium">Frontend Mentor</span>:
+            <span className="font-[600]">August 2025 - September 2025</span>
           </p>
           <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
             Guiding junior students in their Frontend Development journey at PDP
             Junior by providing mentorship, explaining core concepts, and
             sharing practical project experience.
+          </p>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-bold">
+            Pdp Academy - <span className="font-medium">Assistant Mentor</span>:{" "}
+            <span className="font-[600]">September 2025 - Present</span>
+          </p>
+          <p className="font-open-sans mt-[38px] text-center text-[14px] font-light">
+            Helping students understand programming concepts and making coding
+            easier. Conducting extra sessions to enhance learning efficiency
           </p>
         </div>
         <div className="mt-[100px] flex flex-col items-center px-[20px]">
