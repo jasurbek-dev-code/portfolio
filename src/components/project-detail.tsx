@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import type { Project } from "../pages/home/home-updated";
+import type { Project } from "../pages/home/home";
 import { useLanguage } from "../language-context";
 
 export default function ProjectDetail() {
@@ -10,10 +10,10 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="flex min-h-[70vh] flex-col items-center justify-center bg-zinc-950 px-4 text-center">
-        <h1 className="text-2xl font-bold text-white">{t("detail.notFound")}</h1>
-        <p className="mt-2 text-zinc-400">
-          {t("detail.notFoundDesc")}
-        </p>
+        <h1 className="text-2xl font-bold text-white">
+          {t("detail.notFound")}
+        </h1>
+        <p className="mt-2 text-zinc-400">{t("detail.notFoundDesc")}</p>
         <Link
           to="/"
           className="mt-6 inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
@@ -86,10 +86,15 @@ export default function ProjectDetail() {
 
         {/* Key Features */}
         <div className="mt-8 rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-6">
-          <h2 className="text-lg font-bold text-white">{t("detail.features")}</h2>
+          <h2 className="text-lg font-bold text-white">
+            {t("detail.features")}
+          </h2>
           <ul className="mt-4 space-y-3">
             {project.keyFeatures.map((feature: string, idx: number) => (
-              <li key={idx} className="flex items-start gap-3 text-sm text-zinc-300">
+              <li
+                key={idx}
+                className="flex items-start gap-3 text-sm text-zinc-300"
+              >
                 <i className="fa-solid fa-circle-check mt-1 text-cyan-400"></i>
                 <span>{feature}</span>
               </li>

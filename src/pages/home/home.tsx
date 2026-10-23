@@ -638,7 +638,7 @@ export default function Home() {
             <p className="mt-3 text-sm text-zinc-400">{t("lang.subtitle")}</p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* Uzbek Flag */}
             <div className="group flex items-center gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-zinc-800/60">
               <div className="relative flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-zinc-700 shadow-lg shadow-black/40 transition-transform group-hover:scale-105">
@@ -686,25 +686,6 @@ export default function Home() {
                 </h3>
                 <span className="mt-1 inline-block rounded-full bg-cyan-500/15 px-2.5 py-0.5 text-xs font-semibold text-cyan-400">
                   {t("lang.englishLevel")}
-                </span>
-              </div>
-            </div>
-
-            {/* Russian Flag */}
-            <div className="group flex items-center gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-zinc-800/60">
-              <div className="relative flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-zinc-700 shadow-lg shadow-black/40 transition-transform group-hover:scale-105">
-                <svg viewBox="0 0 64 64" className="h-full w-full">
-                  <rect width="64" height="22" fill="#FFFFFF" />
-                  <rect y="21" width="64" height="22" fill="#0039A6" />
-                  <rect y="42" width="64" height="22" fill="#D52B1E" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-white">
-                  {t("lang.russian")}
-                </h3>
-                <span className="mt-1 inline-block rounded-full bg-indigo-500/15 px-2.5 py-0.5 text-xs font-semibold text-indigo-400">
-                  {t("lang.russianLevel")}
                 </span>
               </div>
             </div>
