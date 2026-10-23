@@ -3,31 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  background-color: #09090b;
+}
+
+body {
+  margin: 0;
+  background-color: #09090b;
+  color: #f4f4f5;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
 @theme {
   --font-montserrat: "Montserrat", "sans-serif";
   --font-advent-pro: "Advent Pro", "sans-serif";
   --font-open-sans: "Open Sans", "sans-serif";
-}
-.header-bg{
-  background-image:url("./assets/background.png");
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center, center;
-}
-.portfolio-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media (min-width: 768px) {
-  .portfolio-bg {
-    background-image: url('./assets/protfolio-back.png');
-  }
-}
-
-@media (min-width: 1024px) {
-  .portfolio-bg {
-    background-image: url('./assets/protfolio-back-2.png');
-  }
 }

@@ -6,18 +6,21 @@ import Home from "./pages/home/home";
 import ScrollTo from "./scrollto";
 import Layout from "./layout/layout";
 import ProjectDetail from "./components/project-detail";
+import { LanguageProvider } from "./language-context";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <ScrollTo />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" />} />
-           <Route path="/project/:name" element={<ProjectDetail />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollTo />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/project/:name" element={<ProjectDetail />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   </StrictMode>,
 );
