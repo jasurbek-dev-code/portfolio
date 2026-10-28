@@ -116,6 +116,8 @@ export const translations = {
     "projects.btnDetails": "Details",
     "projects.btnLive": "Live Demo",
     "projects.btnSource": "GitHub",
+    "projects.btnFrontend": "Frontend",
+    "projects.btnBackend": "Backend",
 
     // Project 1: Picture Valley
     "proj.pv.desc":
@@ -142,6 +144,21 @@ export const translations = {
       "Download as PDF – Allows users to export their resume as a high-quality PDF using @react-pdf/renderer.",
     "proj.rm.f5":
       "Resume Archive – Stores downloaded resumes for future reference and reuse.",
+
+    // Project 3: Yangi Alifbo
+    "proj.al.type": "Full-Stack Telegram Mini App",
+    "proj.al.desc":
+      "Yangi Alifbo is a Telegram Mini App for converting Uzbek Latin text into the reformed alphabet. Its React frontend connects to a FastAPI backend that verifies Telegram users and saves their translation history.",
+    "proj.al.f1":
+      "Alphabet conversion – Transliterates Sh, Ch, O' and G' into Ş, Ç, Ō and Ğ.",
+    "proj.al.f2":
+      "Telegram authentication – Verifies Telegram Mini App initData before syncing user accounts.",
+    "proj.al.f3":
+      "Translation history – Saves translations and displays them with pagination.",
+    "proj.al.f4":
+      "Copy results – Copies converted text to the clipboard in one click.",
+    "proj.al.f5":
+      "Full-stack implementation – React 19, TypeScript and Tailwind CSS frontend with a FastAPI and SQLAlchemy backend.",
 
     // Certifications
     "certs.tag": "Verified Credentials",
@@ -276,6 +293,8 @@ export const translations = {
     "projects.btnDetails": "Batafsil",
     "projects.btnLive": "Jonli ko'rish",
     "projects.btnSource": "GitHub",
+    "projects.btnFrontend": "Frontend",
+    "projects.btnBackend": "Backend",
 
     // Project 1: Picture Valley
     "proj.pv.desc":
@@ -302,6 +321,21 @@ export const translations = {
       "PDF formatida yuklab olish – @react-pdf/renderer orqali brauzerdan to'g'ridan-to'g'ri PDF yaratish.",
     "proj.rm.f5":
       "Rezyume arxivi – Yuklab olingan rezyumelarni kelgusida ishlatish uchun saqlash.",
+
+    // Project 3: Yangi Alifbo
+    "proj.al.type": "Full-Stack Telegram Mini App",
+    "proj.al.desc":
+      "Yangi Alifbo — o'zbek lotin matnlarini isloh qilingan yangi alifboga o'tkazuvchi Telegram Mini App. React frontend FastAPI backend bilan ishlaydi: Telegram foydalanuvchilarini tekshiradi va tarjimalar tarixini saqlaydi.",
+    "proj.al.f1":
+      "Alifboni o'zgartirish – Sh, Ch, O' va G' harflarini Ş, Ç, Ō va Ğ ko'rinishiga o'tkazadi.",
+    "proj.al.f2":
+      "Telegram autentifikatsiyasi – Foydalanuvchini sinxronlashdan oldin Telegram Mini App initData ma'lumotini tekshiradi.",
+    "proj.al.f3":
+      "Tarjimalar tarixi – Tarjimalarni saqlaydi va sahifalab ko'rsatadi.",
+    "proj.al.f4":
+      "Natijani nusxalash – O'zgartirilgan matnni bir bosishda clipboard'ga ko'chiradi.",
+    "proj.al.f5":
+      "Full-stack yechim – React 19, TypeScript va Tailwind CSS frontend; FastAPI va SQLAlchemy backend.",
 
     // Certifications
     "certs.tag": "Tasdiqlangan Hujjatlar",
@@ -436,6 +470,8 @@ export const translations = {
     "projects.btnDetails": "Подробнее",
     "projects.btnLive": "Демо",
     "projects.btnSource": "GitHub",
+    "projects.btnFrontend": "Frontend",
+    "projects.btnBackend": "Backend",
 
     // Project 1: Picture Valley
     "proj.pv.desc":
@@ -462,6 +498,21 @@ export const translations = {
       "Экспорт в PDF – Генерация качественного PDF-документа прямо в браузере через @react-pdf/renderer.",
     "proj.rm.f5":
       "Архив резюме – Удобное хранение созданных резюме для быстрого доступа.",
+
+    // Project 3: Yangi Alifbo
+    "proj.al.type": "Full-Stack Telegram Mini App",
+    "proj.al.desc":
+      "Yangi Alifbo — Telegram Mini App для преобразования узбекского латинского текста в реформированный алфавит. React-фронтенд работает с бэкендом на FastAPI, который проверяет пользователей Telegram и сохраняет историю переводов.",
+    "proj.al.f1":
+      "Преобразование алфавита – Заменяет Sh, Ch, O' и G' на Ş, Ç, Ō и Ğ.",
+    "proj.al.f2":
+      "Аутентификация Telegram – Проверяет initData Telegram Mini App перед синхронизацией пользователя.",
+    "proj.al.f3":
+      "История переводов – Сохраняет переводы и отображает их постранично.",
+    "proj.al.f4":
+      "Копирование результата – Копирует преобразованный текст одним нажатием.",
+    "proj.al.f5":
+      "Full-stack решение – React 19, TypeScript и Tailwind CSS во фронтенде, FastAPI и SQLAlchemy в бэкенде.",
 
     // Certifications
     "certs.tag": "Квалификация",

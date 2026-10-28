@@ -51,7 +51,9 @@ export default function ProjectDetail() {
             <h1 className="text-3xl font-extrabold text-white sm:text-4xl">
               {project.name}
             </h1>
-            <p className="mt-1 text-sm text-cyan-400">{t("detail.type")}</p>
+            <p className="mt-1 text-sm text-cyan-400">
+              {t(project.projectTypeKey ?? "detail.type")}
+            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -71,8 +73,21 @@ export default function ProjectDetail() {
               className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-all hover:border-cyan-400 hover:text-white"
             >
               <i className="fa-brands fa-github text-base"></i>
-              {t("projects.btnSource")}
+              {project.backendGithub
+                ? t("projects.btnFrontend")
+                : t("projects.btnSource")}
             </a>
+            {project.backendGithub && (
+              <a
+                href={project.backendGithub}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-all hover:border-cyan-400 hover:text-white"
+              >
+                <i className="fa-brands fa-github text-base"></i>
+                {t("projects.btnBackend")}
+              </a>
+            )}
           </div>
         </div>
 
@@ -80,7 +95,7 @@ export default function ProjectDetail() {
         <div className="mt-8 rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-6">
           <h2 className="text-lg font-bold text-white">{t("detail.about")}</h2>
           <p className="mt-3 leading-relaxed text-zinc-300">
-            {project.description}
+            {t(project.descriptionKey)}
           </p>
         </div>
 
@@ -90,13 +105,13 @@ export default function ProjectDetail() {
             {t("detail.features")}
           </h2>
           <ul className="mt-4 space-y-3">
-            {project.keyFeatures.map((feature: string, idx: number) => (
+            {project.keyFeatureKeys.map((featureKey: string, idx: number) => (
               <li
                 key={idx}
                 className="flex items-start gap-3 text-sm text-zinc-300"
               >
                 <i className="fa-solid fa-circle-check mt-1 text-cyan-400"></i>
-                <span>{feature}</span>
+                <span>{t(featureKey)}</span>
               </li>
             ))}
           </ul>

@@ -4,6 +4,7 @@ import HeaderMobile from "../../components/header-mobile";
 import Skill from "../../components/skill";
 import Header from "../../components/header";
 import { useLanguage } from "../../language-context";
+import portfolioBackImage from "../../assets/portfolio-back-3.jpg";
 
 export interface SkillItem {
   svg: string;
@@ -14,9 +15,11 @@ export interface Project {
   img: string;
   name: string;
   github: string;
+  backendGithub?: string;
   vercel: string;
-  keyFeatures: string[];
-  description: string;
+  projectTypeKey?: string;
+  keyFeatureKeys: string[];
+  descriptionKey: string;
   frontTecnologies: string[];
   tags: string[];
 }
@@ -107,13 +110,8 @@ export default function Home() {
       github: "https://github.com/JasurbekFront-end/picture-valley",
       vercel: "https://picture-valley.vercel.app/",
       tags: ["React", "TypeScript", "Tailwind CSS", "Pexels API"],
-      keyFeatures: [
-        t("proj.pv.f1"),
-        t("proj.pv.f2"),
-        t("proj.pv.f3"),
-        t("proj.pv.f4"),
-      ],
-      description: t("proj.pv.desc"),
+      keyFeatureKeys: ["proj.pv.f1", "proj.pv.f2", "proj.pv.f3", "proj.pv.f4"],
+      descriptionKey: "proj.pv.desc",
       frontTecnologies: [
         "React.js",
         "TypeScript",
@@ -128,20 +126,48 @@ export default function Home() {
       github: "https://github.com/JasurbekFront-end/Resume-maker-react-app",
       vercel: "https://resume-maker-react-app.vercel.app",
       tags: ["React", "TypeScript", "@react-pdf/renderer", "Tailwind CSS"],
-      keyFeatures: [
-        t("proj.rm.f1"),
-        t("proj.rm.f2"),
-        t("proj.rm.f3"),
-        t("proj.rm.f4"),
-        t("proj.rm.f5"),
+      keyFeatureKeys: [
+        "proj.rm.f1",
+        "proj.rm.f2",
+        "proj.rm.f3",
+        "proj.rm.f4",
+        "proj.rm.f5",
       ],
-      description: t("proj.rm.desc"),
+      descriptionKey: "proj.rm.desc",
       frontTecnologies: [
         "React.js",
         "TypeScript",
         "Tailwind CSS",
         "Vite",
         "@react-pdf/renderer",
+      ],
+    },
+    {
+      img: portfolioBackImage,
+      name: "Yangi Alifbo",
+      github: "https://github.com/jasurbek-dev-code/new-alphabet-front",
+      backendGithub: "https://github.com/jasurbek-dev-code/new-alphabet-back",
+      vercel: "https://t.me/yangialifbo1bot",
+      projectTypeKey: "proj.al.type",
+      tags: ["React 19", "TypeScript", "Tailwind CSS", "FastAPI", "Telegram Mini App"],
+      keyFeatureKeys: [
+        "proj.al.f1",
+        "proj.al.f2",
+        "proj.al.f3",
+        "proj.al.f4",
+        "proj.al.f5",
+      ],
+      descriptionKey: "proj.al.desc",
+      frontTecnologies: [
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "SQLAlchemy",
+        "SQLite / PostgreSQL",
+        "Telegram Mini App",
       ],
     },
   ];
@@ -744,7 +770,7 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-zinc-400">
-                    {project.description}
+                    {t(project.descriptionKey)}
                   </p>
 
                   <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-zinc-800/80 pt-4">
@@ -772,8 +798,21 @@ export default function Home() {
                       className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-2 text-xs font-semibold text-zinc-400 transition-all hover:text-white"
                     >
                       <i className="fa-brands fa-github"></i>
-                      {t("projects.btnSource")}
+                      {project.backendGithub
+                        ? t("projects.btnFrontend")
+                        : t("projects.btnSource")}
                     </a>
+                    {project.backendGithub && (
+                      <a
+                        href={project.backendGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-2 text-xs font-semibold text-zinc-400 transition-all hover:text-white"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                        {t("projects.btnBackend")}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
